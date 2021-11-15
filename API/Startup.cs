@@ -1,4 +1,4 @@
-
+ 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -18,6 +18,8 @@ using Application.Activities;
 using AutoMapper;
 using Application.Core;
 using API.Extensions;
+using FluentValidation.AspNetCore;
+using API.Middleware;
 
 namespace API
 {
@@ -36,7 +38,10 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            object p = services.AddControllers().AddFluentValidation(config =>
+            {
+                config.RegisterValidatorsFromAssemblyContaining<Create>(); 
+            });
             services.AddApplicationServices(_config);
             
         }
@@ -44,26 +49,22 @@ namespace API
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+          app.UseMiddleware<ExceptionMiddleware >();
+
            if (env.IsDevelopment())
             {
-                app.UseSwagger();
+               app.UseSwagger();
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "API v1"));
             }
-            else 
-            {
-                app.Use(async (context, next) => 
-                {
-                    context.Response.Headers.Add("Strict-Transport-Security", "max-age=31536000");
-                    await next.Invoke();
-                });
-            }
+            
 
             //app.UseHttpsRedirection();
 
             app.UseRouting();
             app.UseCors("CorsPolicy");
 
-            app.UseAuthentication();
+           // app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -7,12 +7,12 @@ export default function HomePage(){
        <Segment inverted textAlign='center' vertical className='masthead'>
          <Container text>
            <Header as='h1' inverted>
-            <Image size='massive' src='/assets/cineplexx.png' alt='logo' style={{marginBottom: 12}} />
-            Cineplexx
+            <Image size='massive' src='/assets/lead.png' alt='logo' style={{marginBottom: 12}} />
+          Lead
            </Header>
-           <Header as='h2' inverted  content='Welcome to Cineplexx' />
+           <Header as='h2' inverted  content='Welcome to LearningAcademy' />
            <Button as={Link} to='/activities' size='huge' inverted> 
-           Take me to Activities
+           Take me to Courses
            </Button>
          </Container>
 

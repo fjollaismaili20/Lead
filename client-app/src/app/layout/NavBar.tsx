@@ -11,12 +11,13 @@ return (
     <Menu inverted fixed='top'>
         <Container>
         <Menu.Item as={NavLink} to='/' exact header>
-            <img src="/assets/cineplexx.png" alt="logo" style={{marginRight: '10px'}} />
-              Cineplexx
+            <img src="/assets/lead.png" alt="logo" style={{marginRight: '10px'}} />
+              Lead
         </Menu.Item>
-        <Menu.Item as={NavLink} to='/activities' name='Activities' />
+        <Menu.Item as={NavLink} to='/activities' name='Courses' />
+        <Menu.Item as={NavLink} to='/errors' name='Errors' />
         <Menu.Item>
-            <Button as={NavLink} to='/createActivity' positive content='Create Acitivity'/>
+            <Button as={NavLink} to='/createActivity' positive content='Create Activity'/>
         </Menu.Item>
         </Container>
         </Menu>

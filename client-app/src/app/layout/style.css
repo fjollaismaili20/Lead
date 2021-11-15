@@ -3,7 +3,7 @@ body{
 }
 
 .ui.inverted.top.fixed.menu {
-  background-image: linear-gradient(135deg, rgb(212, 145, 145) 0%, rgb(174, 33, 33) 69%, rgb(172, 32, 44) 89% ) !important ;
+  background-image: linear-gradient(135deg,   rgb(3, 150, 161) 0%, rgb(3, 83, 83) 69%, rgb(5, 44, 40) 89%) !important ;
 }
 
 .react-calendar{
@@ -20,9 +20,9 @@ body{
   align-items: center;
   background-image: linear-gradient(
           135deg,
-          rgb(161, 3, 3) 0%,
-          rgb(129, 8, 8) 69%,
-          rgb(84, 12, 12) 89%
+          rgb(3, 150, 161) 0%,
+          rgb(3, 83, 83) 69%,
+          rgb(5, 44, 40) 89%
   ) !important;
   height: 100vh;
 }
