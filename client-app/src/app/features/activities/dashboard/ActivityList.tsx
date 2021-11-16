@@ -9,13 +9,13 @@ import ActivityListItem from './ActivityListItem';
 
 export default  observer(function ActivityList(){
     const {activityStore} =  useStore ();
-    const { groupActivities }= activityStore;
+    const { groupedActivities }= activityStore;
     
     
 
      return(
          <>
-         {groupActivities.map(([group, activities ])=>(
+         {groupedActivities.map(([group, activities ])=>(
              <Fragment key={group}>
                <Header sub color='teal'>
                    {group}

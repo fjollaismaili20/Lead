@@ -1,5 +1,4 @@
-import { placeholder } from '@babel/types';
-import { platform } from 'os';
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Header, Icon, Segment, Button } from 'semantic-ui-react';

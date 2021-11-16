@@ -7,6 +7,7 @@ using Application.Core;
 using Domain;
 using MediatR;
 using Persistence;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Activities
 {
