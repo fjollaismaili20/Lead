@@ -1,25 +1,15 @@
- 
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.OpenApi.Models;
-
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Authorization;
-
-using Microsoft.Extensions.Logging;
-using Persistence;
-using MediatR;
 using Application.Activities;
-using AutoMapper;
-using Application.Core;
 using API.Extensions;
 using FluentValidation.AspNetCore;
 using API.Middleware;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc.Authorization;
 
 namespace API
 {
@@ -38,11 +28,17 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            object p = services.AddControllers().AddFluentValidation(config =>
+            object p = services.AddControllers(opt =>
+            {
+                var policy = new AuthorizationPolicyBuilder().RequireAuthenticatedUser().Build();
+                opt.Filters.Add(new AuthorizeFilter(policy));
+            })
+            .AddFluentValidation(config =>
             {
                 config.RegisterValidatorsFromAssemblyContaining<Create>(); 
             });
             services.AddApplicationServices(_config);
+            services.AddIdentityServices(_config);
             
         }
 
@@ -64,7 +60,7 @@ namespace API
             app.UseRouting();
             app.UseCors("CorsPolicy");
 
-           // app.UseAuthentication();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

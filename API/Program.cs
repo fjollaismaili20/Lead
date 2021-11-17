@@ -1,14 +1,13 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Persistence;
 using Microsoft.EntityFrameworkCore;
+using Persistence;
+using Microsoft.AspNetCore.Identity;
+using Domain;
 
 namespace API
 {
@@ -25,10 +24,11 @@ namespace API
            {
 
                var context = services.GetRequiredService<DataContext>();
+               var userManager = services.GetRequiredService<UserManager<AppUser>>();
 
                 await context.Database.MigrateAsync();
 
-                await Seed.SeedData(context);
+                await Seed.SeedData(context, userManager);
            }
            catch(Exception ex)
            {

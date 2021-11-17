@@ -27,7 +27,7 @@ export default observer(function ActivityForm() {
 
   const { activityStore } = useStore();
   const { createActivity, updateActivity,
-    loading, loadActivity, loadingInitial } = activityStore;
+   loadActivity, loadingInitial } = activityStore;
 
   const { id } = useParams<{ id: string }>();
 
