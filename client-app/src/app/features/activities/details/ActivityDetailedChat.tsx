@@ -23,7 +23,7 @@ export default observer(function ActivityDetailedChat() {
                             <Comment.Metadata>
                                 <div>Today at 5:42PM</div>
                             </Comment.Metadata>
-                            <Comment.Text>How artistic!</Comment.Text>
+                            <Comment.Text>Exellent, so helpfull !</Comment.Text>
                             <Comment.Actions>
                                 <Comment.Action>Reply</Comment.Action>
                             </Comment.Actions>

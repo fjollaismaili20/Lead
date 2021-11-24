@@ -26,7 +26,7 @@ export default observer (function ActivityDetailedHeader({activity}: Props) {
     return (
         <Segment.Group>
             <Segment basic attached='top' style={{padding: '0'}}>
-                <Image src={`/assets/categoryImages/${activity.category}.jpg`} fluid style={activityImageStyle}/>
+                <Image src={`/assets/categoryImages/${activity.category}.png`} fluid style={activityImageStyle}/>
                 <Segment style={activityImageTextStyle} basic>
                     <Item.Group>
                         <Item>

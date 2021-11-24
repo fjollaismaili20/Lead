@@ -20,9 +20,15 @@ return (
               Lead
         </Menu.Item>
         <Menu.Item as={NavLink} to='/activities' name='Courses' />
+        <Menu.Item as={NavLink} to='/profesoret' name='Proffesors' />
+        <Menu.Item as={NavLink} to='/students' name='Students' />
+        <Menu.Item as={NavLink} to='/coursecompleted' name='Course Completed' />
+        <Menu.Item as={NavLink} to='/q&a' name='Q&A' />
+        <Menu.Item as={NavLink} to='/subscription' name='Subscription' />
+         
         <Menu.Item as={NavLink} to='/errors' name='Errors' />
         <Menu.Item>
-            <Button as={NavLink} to='/createActivity' positive content='Create Activity'/>
+            <Button as={NavLink} to='/createActivity' positive content='Create Course'/>
         </Menu.Item>
         <Menu.Item position='right'>
             <Image src={user?.image || '/assets/user.png'} avatar spaced='right' />
