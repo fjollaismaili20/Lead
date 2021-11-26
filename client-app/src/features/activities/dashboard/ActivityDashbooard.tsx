@@ -2,8 +2,8 @@
 import { observer } from "mobx-react-lite";
 import React, { useEffect } from "react";
 import { Grid } from "semantic-ui-react";
-import LoadingComponent from "../../../layout/LoadingComponent";
-import { useStore } from "../../../stores/store";
+import LoadingComponent from "../../../app/layout/LoadingComponent";
+import { useStore } from "../../../app/stores/store";
 import ActivityFilters from "./ActivityFilters";
 import ActivityList from "./ActivityList";
 

@@ -4,7 +4,7 @@ using Application.Core;
 using Domain;
 using FluentValidation;
 using MediatR;
-using Persistence;
+using Persistence; 
 using Application.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
@@ -58,6 +58,6 @@ namespace Application.Activities
                 
              return Result<Unit>.Success(Unit.Value);
             }
-        }
+        } 
     }
 }

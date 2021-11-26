@@ -2,9 +2,9 @@ import {  observer } from 'mobx-react-lite';
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import {  Grid  } from 'semantic-ui-react';
-import LoadingComponent from '../../../layout/LoadingComponent';
+import LoadingComponent from '../../../app/layout/LoadingComponent';
 
-import { useStore } from '../../../stores/store';
+import { useStore } from '../../../app/stores/store';
 import ActivityDetailedChat from './ActivityDetailedChat';
 import ActivityDetailedSidebar from './ActivityDetailedSidebar';
 import ActivityDetailedHeader from './ActivityDetaledHeader';
@@ -34,7 +34,7 @@ export default observer (function AcitivityDetails() {
          <ActivityDetailedChat />
          </Grid.Column>
          <Grid.Column width={6}>
-          <ActivityDetailedSidebar />
+          <ActivityDetailedSidebar activity={activity} />
          </Grid.Column>
        </Grid>
     )

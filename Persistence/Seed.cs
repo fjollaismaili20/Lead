@@ -45,7 +45,7 @@ namespace Persistence
                 {
                     new Activity
                     {
-                        Title = "Past Activity 1",
+                        Title = "Course 1",
                         Date = DateTime.Now.AddMonths(-2),
                         Description = "Activity 2 months ago",
                         Category = "math",
@@ -62,7 +62,7 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Past Activity 2",
+                        Title = "Course 2",
                         Date = DateTime.Now.AddMonths(-1),
                         Description = "Activity 1 month ago",
                         Category = "digital marketing",
@@ -84,7 +84,7 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 1",
+                        Title = "Course 3",
                         Date = DateTime.Now.AddMonths(1),
                         Description = "Activity 1 month in future",
                         Category = "webDevelopment",
@@ -106,7 +106,7 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 2",
+                        Title = "Course 4",
                         Date = DateTime.Now.AddMonths(2),
                         Description = "Activity 2 months in future",
                         Category = "dataScience",
@@ -128,7 +128,7 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 3",
+                        Title = "Course 5",
                         Date = DateTime.Now.AddMonths(3),
                         Description = "Activity 3 months in future",
                         Category = "english",
@@ -150,7 +150,7 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 4",
+                        Title = "Course 6",
                         Date = DateTime.Now.AddMonths(4),
                         Description = "Activity 4 months in future",
                         Category = "algorithm",
@@ -167,7 +167,7 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 5",
+                        Title = "Course 7",
                         Date = DateTime.Now.AddMonths(5),
                         Description = "Activity 5 months in future",
                         Category = "math",
@@ -211,7 +211,7 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 7",
+                        Title = "Course 7",
                         Date = DateTime.Now.AddMonths(7),
                         Description = "Activity 7 months in future",
                         Category = "math",
@@ -233,7 +233,7 @@ namespace Persistence
                     },
                     new Activity
                     {
-                        Title = "Future Activity 8",
+                        Title = "Course 8",
                         Date = DateTime.Now.AddMonths(8),
                         Description = "Activity 8 months in future",
                         Category = "algorithm",

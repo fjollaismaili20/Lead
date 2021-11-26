@@ -3,8 +3,8 @@ import { observer } from "mobx-react-lite";
 
 import React from "react";
 import { Button, Header, Label } from "semantic-ui-react";
-import MyTextInput from "../../common/form/MyTextInput";
-import { useStore } from "../../stores/store";
+import MyTextInput from "../../app/common/form/MyTextInput";
+import { useStore } from "../../app/stores/store";
 
 export default observer( function LoginForm() {
     const {userStore} = useStore();
