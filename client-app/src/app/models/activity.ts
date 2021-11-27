@@ -7,7 +7,7 @@ export interface Activity {
     description: string;
     category: string;
     city: string;
-    form: string;
+    form: string; 
     hostUsername: string;
     isCancelled: boolean;
     isGoing: boolean;
